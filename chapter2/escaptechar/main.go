@@ -12,6 +12,6 @@ func main()  {
 
 	fmt.Println("ranbot say \"i love you\"")
 
-	// \r 回车
+	// \r 回车 从当前行开始最前面开始输出，覆盖之前的内容
 	fmt.Println("天龙八部雪山飞狐\r张飞")
 }
