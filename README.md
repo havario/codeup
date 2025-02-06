@@ -5,4 +5,4 @@
   <img src="https://img.shields.io/github/last-commit/havario/codeup" alt="Commit" />
 </p>
 
-Code never lies, comments sometimes do.
+code never lies, comments sometimes do.
