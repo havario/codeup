@@ -1,4 +1,4 @@
-// Copyright (C) 2025 honeok <honeok@duck.com>
+// Copyright (c) 2025 honeok <honeok@duck.com>
 
 package main
 
@@ -37,10 +37,10 @@ func main() {
 	// 如何在程序查看某个变量的占用字节大小和数据类型 (使用较多)
 	var n2 int64 = 10
 	// unsafe.Sizeof(n1) 是unsafe包的一个函数, 可以返回n1变量的占用字节数
-	fmt.Printf("n2的数据类型: %T n2占用的字节数是: %d", n2, unsafe.Sizeof(n2)) 
+	fmt.Printf("n2的数据类型: %T n2占用的字节数是: %d \n", n2, unsafe.Sizeof(n2)) 
 
-	/* 	golang程序中整型变量在使用中, 遵守保小不保大的原则
-		即在保证程序正常运行情况下, 尽量使用占用空间小的数据类型 */
+	// golang程序中整型变量在使用中, 遵守保小不保大的原则
+	// 	即在保证程序正常运行情况下, 尽量使用占用空间小的数据类型
 	var age byte = 90
-	fmt.Printf("age=", age)
+	fmt.Printf("age=%d", age)
 }
