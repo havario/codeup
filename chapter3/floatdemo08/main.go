@@ -1,4 +1,4 @@
-// Copyright (C) 2025 honeok <honeok@duck.com>
+// Copyright (c) 2025 honeok <honeok@duck.com>
 
 package main
 
@@ -27,7 +27,7 @@ func main() {
 
 	// 十进制数格式: 如 5.12 .512 (必须有小数点)
 	num6 := 5.12
-	num7 := .123 //=> 0.123
+	num7 := .123 // 等价于 0.123
 	fmt.Println("num6=", num6, "num7=", num7)
 
 	// 科学计数法
