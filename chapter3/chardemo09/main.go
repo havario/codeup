@@ -21,6 +21,13 @@ func main() {
 	// var c3 byte = '北' byte value in variable declaration (overflows)
 	var c3 int = '北'
 	fmt.Printf("c3 = %c c3对应的码值 = %d\n", c3, c3)
+
+	var c4 int = 120 // 22269 -> 国
+	fmt.Printf("c4 = %c\n", c4)
+
+	// 字符类型是可以运算的, 相当于一个整数, 运算时按码值运行
+	var n1 = 10 + 'a' // 10 + 97
+	fmt.Println("n1 =", n1)
 }
 
 // 说明
