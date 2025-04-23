@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-//golang 指针
+// golang 指针
 func main() {
 	// 基本数据类型在内存布局
 	var i int = 10
