@@ -3,8 +3,8 @@
 package main
 
 import (
-	"codeup/chapter3/demo04/model"
-	"fmt"
+    "fmt"
+    "codeup/chapter3/demo04/model"
 )
 
 // 变量使用注意事项
