@@ -2,7 +2,10 @@
 
 package main
 
-import "fmt"
+import (
+	"codeup/chapter3/demo04/model"
+	"fmt"
+)
 
 // 变量使用注意事项
 func main() {
@@ -16,4 +19,7 @@ func main() {
 	// 变量在同一个作用域(再一个函数或代码块)内不能同名
 	// var i int = 59
 	// i := 99
+
+	// 使用utils.go的heroName包名.标识符
+	fmt.Println(model.HeroName)
 }
