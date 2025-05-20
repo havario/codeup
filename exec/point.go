@@ -1,13 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// 打印内存地址
 	var num int = 9
 	fmt.Printf("num address is: %v\n", &num)
 
-	// 定义一个指针修改其值
+	// 定义一个指针变量修改其值
 	var ptr *int
 	ptr = &num
 	*ptr = 10 // 修改为10会导致num 值变化
