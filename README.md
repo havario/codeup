@@ -7,4 +7,4 @@
 
 </div>
 
-code never lies, comments sometimes do.
+code never lies, but people sometimes do.
