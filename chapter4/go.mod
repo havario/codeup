@@ -1,3 +1,3 @@
-module demo01
+module chapter4
 
 go 1.24.3
