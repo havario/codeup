@@ -25,5 +25,10 @@ func main() {
 	fmt.Println("是否通过考试")
 	fmt.Scanln(&isPass)
 
-	fmt.Printf("名字是 %v \n 年龄是 %v 薪资 %v 是否通过考试 %v \n", name, age, salary, isPass)
+	fmt.Printf("名字是 %v \n 年龄是 %v \n 薪资 %v \n 是否通过考试 %v \n", name, age, salary, isPass)
+
+	// 方式2: fmt.Scanf, 可以按指定的格式输入
+	fmt.Println("请输入你的信息: 姓名 年龄 薪水 是否通过考试, 使用空格分割")
+	fmt.Scanf("%s %d %f %t", &name, &age, &salary, &isPass)
+	fmt.Printf("名字是 %v \n 年龄是 %v \n 薪资 %v \n 是否通过考试 %v \n", name, age, salary, isPass)
 }
