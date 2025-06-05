@@ -1,3 +1,5 @@
+// Copyright (c) 2025 honeok <honeok@autistici.org>
+
 package main
 
 import (
