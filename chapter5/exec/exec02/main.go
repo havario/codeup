@@ -1,4 +1,4 @@
-// Copyright (c) 2025 honeok <honeok@autistici.org>
+// Copyright (c) 2025 honeok <honeok@disroot.org>
 
 package main
 
