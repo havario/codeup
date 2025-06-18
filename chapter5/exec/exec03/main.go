@@ -43,7 +43,7 @@ func main() {
 
 	// 旺季
 	if month >= 4 && month <= 10 {
-		if age > 60 {
+		if age >= 60 {
 			fmt.Printf("%v月 年龄: %v 票价: %v\n", month, age, price/3)
 		} else if age >= 18 {
 			fmt.Printf("%v月 年龄: %v 票价: %v\n", month, age, price)
