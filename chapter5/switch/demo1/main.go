@@ -50,4 +50,51 @@ func main() {
 	default:
 		fmt.Println("无匹配项")
 	}
+
+	// switch后也可以不带表达式, 类似if --else 分支使用
+	var age int = 10
+	switch {
+	case age == 10:
+		fmt.Printf("age是10\n")
+	case age == 20:
+		fmt.Printf("age是20\n")
+	default:
+		fmt.Printf("没有匹配项\n")
+	}
+
+	// case中也可以对范围进行判断
+	var score int = 30
+	switch {
+	case score > 90:
+		fmt.Printf("成绩优秀\n")
+	case score >= 70 && score <= 90:
+		fmt.Printf("成绩良\n")
+	default:
+		fmt.Printf("真你妈垃圾\n")
+	}
+
+	// switch后也可以直接声明/定义一个变量, 分号结束 不推荐
+	switch grade := 90; {
+	case grade > 90:
+		fmt.Printf("成绩优秀\n")
+	case grade >= 70 && grade <= 90:
+		fmt.Printf("成绩良\n")
+	default:
+		fmt.Printf("真你妈垃圾\n")
+	}
+
+	// switch的穿透 fallthrought
+	var num int = 10
+	switch num {
+	case 10:
+		fmt.Printf("ok1\n")
+		fallthrough // 默认只能穿透一层
+	case 20:
+		fmt.Printf("ok2\n")
+		fallthrough
+	case 30:
+		fmt.Printf("ok3\n")
+	default:
+		fmt.Printf("错误匹配\n")
+	}
 }
