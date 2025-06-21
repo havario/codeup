@@ -30,4 +30,23 @@ func main() {
 		}
 		k++
 	}
+
+	// 字符串遍历 方式1
+	// var str string = "hello, world!"
+	// for i := 0; i < len(str); i++ {
+	// 	fmt.Printf("%c\n", str[i])
+	// }
+
+	// 字符串遍历 方式1
+	var str string = "hello, world!乌克兰"
+	change := []rune(str) // 就是把str转为 []rune
+	for i := 0; i < len(change); i++ {
+		fmt.Printf("%c\n", change[i])
+	}
+
+	// 字符串遍历 方式2 for range
+	str = "wocaonima!"
+	for index, value := range str {
+		fmt.Printf("index=%v value=%c \n", index, value)
+	}
 }
