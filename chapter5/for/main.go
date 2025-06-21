@@ -45,7 +45,8 @@ func main() {
 	}
 
 	// 字符串遍历 方式2 for range
-	str = "wocaonima!"
+	// for-range变量字符串是按照字符进行遍历, 而不是字节
+	str = "wocaonima!俄罗斯"
 	for index, value := range str {
 		fmt.Printf("index=%v value=%c \n", index, value)
 	}
