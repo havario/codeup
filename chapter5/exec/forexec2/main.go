@@ -15,6 +15,10 @@ func main() {
 	var classNum int = 3
 	var stuNum int = 5
 
+	// 统计三个班及格人数
+	// 声明一个变量用于保存及格人数
+	var passCount int = 0
+
 	var totalSum float64 = 0.0
 	for j := 1; j <= classNum; j++ {
 		sum := 0.0
@@ -24,10 +28,15 @@ func main() {
 			fmt.Scanln(&score)
 			// 累计学生总分
 			sum += score
+			// 判断分数是否及格
+			if score >= 60 {
+				passCount++
+			}
 		}
 		fmt.Printf("第%d个班的平均分是%v\n", j, sum/float64(stuNum))
 		// 将各个班的总成绩累计到totalSum
 		totalSum += sum
 	}
 	fmt.Printf("各个班级的总成绩%v 各个班平均分是%v\n", totalSum, totalSum/float64(stuNum*classNum))
+	fmt.Printf("及格人数为%v\n", passCount)
 }
