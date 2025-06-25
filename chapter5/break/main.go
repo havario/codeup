@@ -18,8 +18,9 @@ func main() {
 
 	var count int = 0
 	for {
-		rand.Seed(time.Now().Unix())
-		n := rand.Intn(100) + 1
+		rand.Seed(time.Now().UnixNano()) // 纳秒
+		n := rand.Intn(100) + 1          // 默认是0~99
+		fmt.Printf("n=%v\n", n)
 		count++
 		if n == 99 {
 			break
