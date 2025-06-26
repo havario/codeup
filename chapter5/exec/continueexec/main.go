@@ -50,4 +50,5 @@ func main() {
 		passCount++
 	}
 	fmt.Printf("经过%d次路口\n", passCount)
+	fmt.Printf("剩余金额: %v\n", float32(principal))
 }
