@@ -36,4 +36,18 @@ func main() {
 	// 当现金 > 50000元时, 每次交5%
 	// 当现金 < 50000元时, 每次交1000
 	// 计算该人可以经过多少次路口, 使用 for break 完成
+	principal := 100000.0 // 总金额
+	passCount := 0        // 通行计数器
+	for {
+		if principal > 50000 {
+			also := principal * 0.05
+			principal -= also
+		} else if principal >= 1000 {
+			principal -= 1000
+		} else {
+			break
+		}
+		passCount++
+	}
+	fmt.Printf("经过%d次路口\n", passCount)
 }
