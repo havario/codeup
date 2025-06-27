@@ -4,7 +4,8 @@ package main
 
 import (
 	"fmt"
-	C "func/utils"
+
+	C "github.com/havario/codeup/chapter6/func/utils"
 )
 
 func main() {
@@ -23,4 +24,5 @@ func main() {
 	// 调用函数
 	result = C.Cal(num1, num2, operator)
 	fmt.Printf("结果为: %v\n", result)
+	C.SayOk()
 }
