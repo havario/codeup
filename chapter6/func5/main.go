@@ -35,6 +35,18 @@ func getSumAndSub(n1 int, n2 int) (sum int, sub int) {
 	return // 返回两个结果按顺序接收
 }
 
+// 编写一个sum函数,  可以求出 1到多个int的和
+// 可变参数的使用
+// 如果一个函数的形参列表有可变参数, 则可变参数需要放在形参列表最后
+func sum(n1 int, args ...int) int {
+	sum := n1
+	// 遍历args
+	for i := 0; i < len(args); i++ {
+		sum += args[i] // args[0] 表示取出args切片第一个元素的值, 其他以此类推
+	}
+	return sum
+}
+
 func main() {
 	// 函数赋值给一个变量a
 	// a为一个函数变量
@@ -60,8 +72,11 @@ func main() {
 	result3 := anyway2(getSum, 500, 600)
 	fmt.Printf("result3 = %v\n", result3)
 
-	//
 	e, f := getSumAndSub(1, 2)
 	fmt.Printf("e = %v\n", e) // sum
 	fmt.Printf("f = %v\n", f) // sub
+
+	// 测试一下可变参数的使用
+	result4 := sum(10, 0, -1, 90, 10)
+	fmt.Printf("result4=%v\n", result4)
 }
