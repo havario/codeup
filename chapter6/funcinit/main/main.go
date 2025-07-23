@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	U "github.com/havario/codeup/chapter6/func6-init/utils"
+	U "github.com/havario/codeup/chapter6/funcinit/utils"
 )
 
 var age = pre()
