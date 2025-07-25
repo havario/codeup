@@ -14,7 +14,10 @@ func sum(n1, n2 int) int {
 	defer fmt.Println("ok1 n1 =", n1)
 	defer fmt.Println("ok2 n2 =", n2)
 
-	result := n1 + n2 // result 30
+	// 增加一句话
+	n1++
+	n2++
+	result := n1 + n2 // result 32
 	fmt.Println("ok3 result =", result)
 	return result
 }
