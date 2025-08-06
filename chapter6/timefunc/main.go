@@ -40,4 +40,20 @@ func main() {
 	fmt.Println()
 	fmt.Println(now.Format("15:04:05"))
 	fmt.Println()
+
+	// 需求1: 每隔一秒打印一个数字, 打印到100就退出
+	// 需求2: 每隔0.1秒打印一个数字, 打印到100就退出
+	i := 0
+	for {
+		i++
+		fmt.Println(i)
+		// sleep
+		time.Sleep(time.Millisecond * 100)
+		if i == 100 {
+			break
+		}
+	}
+
+	// Unix和UnixNano的使用
+	fmt.Printf("Unix时间戳=%v UnixNano时间戳=%v", now.Unix(), now.UnixNano())
 }
