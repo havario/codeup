@@ -4,6 +4,12 @@ import (
 	"fmt"
 )
 
+/*
+	切片定义的基本语法
+	var 切片名 []类型
+	比如 var a []int
+*/
+
 func main() {
 	// 演示切片的基本使用
 	var intArr [5]int = [...]int{1, 22, 33, 66, 99}
