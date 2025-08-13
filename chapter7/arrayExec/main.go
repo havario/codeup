@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 )
 
 func main() {
@@ -66,4 +67,31 @@ func main() {
 	}
 	// 如何让平均值保留到小数点到小数?
 	fmt.Printf("sum=%v 平均值=%v\n", sum, float64(sum)/float64(len(intArr2)))
+
+	fmt.Println()
+
+	/*
+		要求: 随机生成五个数，并将其"反转打印"
+
+		思路:
+		1> 随机生成五个数 rand.Intn() 函数
+		2> 当得到随机数后, 就放到一个数组中 int数组
+		3> 反转打印 , 交换的次数 len/2 倒数第一和第一个元素交换 依次内推
+	*/
+
+	var intArr3 [5]int
+	for i := 0; i < len(intArr3); i++ {
+		intArr3[i] = rand.Intn(100) // 100 > n >=0
+	}
+	fmt.Printf("交换前: %v\n", intArr3)
+
+	// 交换的次数 len/2 倒数第一和第一个元素交换 依次内推
+	tempVar := 0 // 临时变量
+	for i := 0; i < len(intArr3)/2; i++ {
+		tempVar = intArr3[len(intArr3)-1-i]
+		intArr3[len(intArr3)-1-i] = intArr3[i]
+		intArr3[i] = tempVar
+	}
+
+	fmt.Printf("交换后: %v\n", intArr3)
 }
