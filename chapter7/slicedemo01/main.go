@@ -21,8 +21,15 @@ func main() {
 		3> 引用intArr数组的起始下标为1, 最后的下标为3(不包含3)
 	*/
 	slice := intArr[1:3]
-	fmt.Println("intArr: ", intArr)
-	fmt.Println("slice元素是: ", slice)
-	fmt.Println("slice元素个数: ", len(slice))
-	fmt.Println("slice容量: ", cap(slice)) // slice目前可以存储的最大元素的个数, 容量可动态变化
+	fmt.Printf("intArr: %v\n", intArr)
+	fmt.Printf("slice元素是: %v\n", slice)
+	fmt.Printf("slice元素个数: %v\n", len(slice))
+	fmt.Printf("slice容量: %v\n", cap(slice)) // slice目前可以存储的最大元素的个数, 容量可动态变化
+
+	fmt.Printf("intArr[1]的地址: %p\n", &intArr[1])
+	fmt.Printf("slice[0]的地址: %p slice[0]的值: %v\n", &slice[0], slice[0])
+	slice[1] = 34
+	fmt.Println()
+	fmt.Printf("intArr: %v\n", intArr)
+	fmt.Printf("slice元素是: %v\n", slice)
 }
