@@ -1,3 +1,5 @@
+// Copyright 2025 honeok <i@honeok.com>
+
 package main
 
 import (
