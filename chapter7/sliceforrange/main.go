@@ -32,4 +32,17 @@ func main() {
 	slice2 := slice[2:4] // 30 40
 	slice2[0] = 100      // 同理slice[0]也会变化, 因为slice和slice2指向同一个数据空间, 因此slice2变化slice也会变化
 	fmt.Println("slice2=", slice2)
+
+	// 使用append内置函数, 可以对切片进行动态追加
+	slice3 := []int{100, 200, 300}
+	//通过append直接给slice3追加具体的元素
+	slice3 = append(slice3, 400, 500, 600)
+	// 通过append将切片slice3追加给slice3
+	slice3 = append(slice3, slice3...)
+
+	fmt.Println("slice3", slice3)
+
+	// 通过append将切片slice3追加给slice3
+	slice3 = append(slice3, slice3...)
+	fmt.Println("slice3", slice3)
 }
