@@ -33,7 +33,16 @@ func main() {
 	slice2[0] = 100      // 同理slice[0]也会变化, 因为slice和slice2指向同一个数据空间, 因此slice2变化slice也会变化
 	fmt.Println("slice2=", slice2)
 
-	// 使用append内置函数, 可以对切片进行动态追加
+	/*
+		使用append内置函数, 可以对切片进行动态追加
+
+		切片append操作的本质就是对数组扩容
+		go底层会创建一下新的数组 newArr(安装后的扩容大小)
+		将slice原来包含的元素拷贝到新的数组newArr
+		slice重新引用到newArr
+		注意newArr是在底层来维护的, 程序员不可见
+	*/
+
 	slice3 := []int{100, 200, 300}
 	//通过append直接给slice3追加具体的元素
 	slice3 = append(slice3, 400, 500, 600)
@@ -45,4 +54,18 @@ func main() {
 	// 通过append将切片slice3追加给slice3
 	slice3 = append(slice3, slice3...)
 	fmt.Println("slice3", slice3)
+
+	fmt.Println()
+
+	/*
+		切片的拷贝操作
+
+		1. copy(para1, para2) 参数的数据类型都是切片
+		2. 按照下面的代码来看, slice4和slice5的数据空间是独立的, 相互不影响也就是说slice4[0]=999 slice5[0]仍然是1
+	*/
+	var slice4 []int = []int{1, 2, 3, 4, 5}
+	var slice5 = make([]int, 10)
+	fmt.Println(slice4)
+	copy(slice5, slice4)
+	fmt.Println(slice5)
 }
