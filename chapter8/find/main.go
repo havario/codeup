@@ -18,7 +18,7 @@ func main() {
 	fmt.Printf("请输入查找的人名:")
 	fmt.Scanln(&heroName)
 
-	// 顺序查找:  第一种方式
+	// 顺序查找: 第一种方式
 	for i := 0; i < len(names); i++ {
 		if heroName == names[i] {
 			fmt.Printf("名字已找到: %v 下标: %v\n", heroName, i)
@@ -26,5 +26,19 @@ func main() {
 		} else if i == (len(names) - 1) {
 			fmt.Printf("名字没有找到: %v\n", heroName)
 		}
+	}
+
+	// 顺序查找: 第二种方式 ⭐
+	index := -1 // 定义一个默认的下标
+	for i := 0; i < len(names); i++ {
+		if heroName == names[i] {
+			index = i // 将找到的值对应的下标赋值index
+		}
+	}
+
+	if index != -1 {
+		fmt.Printf("名字已找到: %v 下标: %v\n", heroName, index)
+	} else {
+		fmt.Printf("名字没有找到: %v\n", heroName)
 	}
 }
