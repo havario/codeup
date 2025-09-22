@@ -42,6 +42,7 @@ func main() {
 		思路: map[string]map[string]string
 	*/
 	studentMap := make(map[string]map[string]string)
+
 	studentMap["stu01"] = make(map[string]string, 3)
 	studentMap["stu01"]["name"] = "Tom"
 	studentMap["stu01"]["gender"] = "男"
