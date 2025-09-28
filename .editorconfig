@@ -12,7 +12,10 @@ insert_final_newline = true
 [*.go]
 indent_style = tab
 
-[*.sh]
+[Makefile]
+indent_style = tab
+
+[*.{py,sh}]
 indent_size = 4
 
 [*.{json,yml,yaml}]
