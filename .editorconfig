@@ -9,13 +9,18 @@ end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.go,Makefile]
+[*.go]
 indent_style = tab
+indent_size = 4
+
+[{*.mk,Makefile,Makefile.*}]
+indent_style = tab
+indent_size = 4
 
 [*.{py,sh}]
 indent_size = 4
 
-[*.{json,yml,yaml}]
+[*.{json,yaml}]
 indent_size = 2
 
 [*.md]
