@@ -1,4 +1,13 @@
+/*
+Copyright (c) 2025 honeok <i@honeok.com>
+SPDX-License-Identifier: MIT
+*/
+
 package main
+
+import (
+	"fmt"
+)
 
 /*
 张老太养了两只猫猫:
@@ -9,5 +18,5 @@ package main
 */
 
 func main() {
-
+	fmt.Printf("random\n")
 }
