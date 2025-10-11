@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2025 honeok <i@honeok.com>
+Copyright (c) 2025 honeok ♡ Rosé <i@honeok.com>
 SPDX-License-Identifier: MIT
 */
 
@@ -18,9 +18,14 @@ type Person struct {
 	Name   string
 	Age    int
 	Scores [5]float64
-	ptr    *int  // 指针
-	slice  []int // 切片
-	map1   map[string]string
+	ptr    *int              // 指针
+	slice  []int             // 切片
+	map1   map[string]string // map
+}
+
+type Monster struct {
+	Name string
+	Age  int
 }
 
 func main() {
@@ -38,8 +43,24 @@ func main() {
 		fmt.Println("ok")
 	}
 
-	// 使用slice
+	// 使用slice 先make
 	p1.slice = make([]int, 10)
 	p1.slice[0] = 100
-	fmt.Println(p1)
+	fmt.Println(p1.slice)
+
+	// 使用map 同样先make
+	p1.map1 = make(map[string]string, 5)
+	p1.map1["beauty1"] = "Rosé"
+	p1.map1["beauty2"] = "Jennie"
+	fmt.Println(p1.map1)
+
+	// 不同结构体变量的字段是独立互不影响, 一个结构体变量字段的更改不影响另外一个, 结构体是值类型
+	var monster1 Monster
+	monster1.Name = "牛魔酬宾"
+	monster1.Age = 500
+
+	monster2 := monster1
+	monster2.Name = "喷嚏精"                // 修改monster2的Name验证结构体是值类型 默认为值拷贝
+	fmt.Println("monster1 = ", monster1) // monster1 =  {牛魔酬宾 500}
+	fmt.Println("monster2 = ", monster2) // monster2 =  {喷嚏怪 500}
 }
