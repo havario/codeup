@@ -1,7 +1,7 @@
-/*
-Copyright (c) 2025 honeok ♡ Rosé <i@honeok.com>
-SPDX-License-Identifier: MIT
-*/
+/**
+ * Copyright (c) 2025 honeok ♡ Rosé <i@honeok.com>
+ * SPDX-License-Identifier: MIT
+ */
 
 package main
 
@@ -9,10 +9,10 @@ import (
 	"fmt"
 )
 
-/*
-如果结构体的字段类型为: 指针 slice map 的零值都是nil 即还没有分配空间
-如果需要使用这样的字段, 需要先make才能使用
-*/
+/**
+ * 如果结构体的字段类型为: 指针 slice map 的零值都是nil 即还没有分配空间
+ * 如果需要使用这样的字段, 需要先make才能使用
+ */
 
 type Person struct {
 	Name   string
@@ -34,13 +34,13 @@ func main() {
 	fmt.Println(p1)
 
 	if p1.ptr == nil {
-		fmt.Println("ok")
+		fmt.Println("ok1")
 	}
 	if p1.slice == nil {
-		fmt.Println("ok")
+		fmt.Println("ok2")
 	}
 	if p1.map1 == nil {
-		fmt.Println("ok")
+		fmt.Println("ok3")
 	}
 
 	// 使用slice 先make
@@ -49,7 +49,7 @@ func main() {
 	fmt.Println(p1.slice)
 
 	// 使用map 同样先make
-	p1.map1 = make(map[string]string, 5)
+	p1.map1 = make(map[string]string)
 	p1.map1["beauty1"] = "Rosé"
 	p1.map1["beauty2"] = "Jennie"
 	fmt.Println(p1.map1)
