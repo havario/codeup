@@ -4,8 +4,9 @@ name: "Bump Go Version"
 on:
   push:
     branches: [master, release]
-  pull_request:
-    types: [opened, reopened, synchronize]
+    paths:
+      - ".github/bump-go-version.sh"
+      - ".github/workflows/bump-go-version.yaml"
   schedule:
     - cron: "0 16 * * *"
   workflow_dispatch:
@@ -33,7 +34,7 @@ jobs:
       - name: "Setup Go"
         uses: actions/setup-go@v6
         with:
-          go-version-file: "go.mod"
+          go-version: "stable"
           check-latest: true
 
       - name: "Bump Go Version"
