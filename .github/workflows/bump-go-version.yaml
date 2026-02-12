@@ -43,12 +43,12 @@ jobs:
           bash bump-go-version.sh
           rm -f bump-go-version.sh || exit 1
           if ! git diff --quiet --exit-code; then
-            echo "RENEW=1" >> "$GITHUB_ENV"
+            echo "renew=1" >> "$GITHUB_ENV"
           fi
 
       - name: "Upload commit to repository"
         uses: stefanzweifel/git-auto-commit-action@v7
-        if: env.RENEW == '1'
+        if: env.renew == '1'
         with:
           commit_message: "chore(deps): bump golang"
           commit_options: "--no-verify --signoff"
