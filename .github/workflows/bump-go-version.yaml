@@ -50,7 +50,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         if: env.RENEW == '1'
         with:
-          commit_message: "chore: bump go version by github actions"
+          commit_message: "chore(deps): bump golang"
           commit_options: "--no-verify --signoff"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
